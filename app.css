@@ -1,0 +1,48 @@
+    h1, h2, h3, h4 {
+        font-weight: 100;
+        margin-bottom: 5px;
+        margin-top: 0;
+    }
+    h3 {
+        font-size: 15px;
+    }
+    body {
+        width: 350px;
+        margin: 50px auto;
+    }
+    img {
+        width: 100%;
+        margin-top: 35px
+    }
+    header {
+        border-bottom: 1px solid black;
+        padding-bottom: 7px;
+        margin-bottom: 10px;
+    }
+    ul {
+        margin-top: 0;
+        list-style-type: none;
+        padding-left: 0;
+    }
+    li {
+        display: inline-block;
+        margin-right: 3px;
+    }
+    h1 > a {
+      color: black;
+      text-decoration: none;
+    }
+    li > a {
+        text-decoration: none;
+    }
+    li > a:hover {
+      text-decoration: underline;
+    }
+    p {
+      font-size: 13px;
+      line-height: 15px;
+      margin-top: 30px;
+    }
+    .resources-ul {
+      font-size: 13px;
+    }
