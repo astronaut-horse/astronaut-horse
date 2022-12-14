@@ -11,14 +11,14 @@
     }
     body {
         width: 350px;
-        margin: 50px auto;
+        margin: 50px auto 100px;
     }
     img {
         width: 100%;
         margin-top: 35px
     }
     header {
-        border-bottom: 1px solid black;
+        border-bottom: 0.5px solid black;
         padding-bottom: 4px;
         margin-bottom: 8px;
     }
@@ -45,19 +45,37 @@
     p {
       font-size: 13px;
       line-height: 15px;
-      margin-top: 30px;
+      margin-top: 15px;
     }
     .resources-ul {
+      line-height: 13px;
+    }
+    .resources-ul > li > a, .small-link {
       font-size: 13px;
+      text-decoration: underline;
+      color: indigo;
     }
     .resources-ul > li {
       display: block;
       margin-bottom: 2px;
     }
+    .models-ul > li {
+      display: block;
+      margin-top: 70px;
+    }
+    .models-ul > li > img {
+      display: block;
+      margin-bottom: 17px;
+    }
     h4 {
         margin-top: 30px;
-        border-bottom: 1px solid black;
+        border-bottom: 0.5px solid black;
         width: 200px;
         padding-bottom: 2px;
         margin-bottom: 8px;
+        font-size: 15px;
+    }
+    section {
+        margin-top: 30px;
+        margin-bottom: 40px;
     }
