@@ -3,6 +3,9 @@
         margin-bottom: 5px;
         margin-top: 0;
     }
+    h1 {
+        font-size: 30px;
+    }
     h3 {
         font-size: 15px;
     }
@@ -16,8 +19,8 @@
     }
     header {
         border-bottom: 1px solid black;
-        padding-bottom: 7px;
-        margin-bottom: 10px;
+        padding-bottom: 4px;
+        margin-bottom: 8px;
     }
     ul {
         margin-top: 0;
@@ -34,6 +37,7 @@
     }
     li > a {
         text-decoration: none;
+        font-size: 15px;
     }
     li > a:hover {
       text-decoration: underline;
@@ -45,4 +49,15 @@
     }
     .resources-ul {
       font-size: 13px;
+    }
+    .resources-ul > li {
+      display: block;
+      margin-bottom: 2px;
+    }
+    h4 {
+        margin-top: 30px;
+        border-bottom: 1px solid black;
+        width: 200px;
+        padding-bottom: 2px;
+        margin-bottom: 8px;
     }
