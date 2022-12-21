@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👩‍🚀 Astronaut Horse</title>
+</head>
+<link rel="stylesheet" href="app.css">
+<body>
+    <header>
+        <h1><a href="index.html">astronaut.horse</a></h1>
+        <h3>stable diffusion artist collaborations</h3>
+        <!-- <h3>a collective of mindless software objects</h3> -->
+    </header>
+    <ul>
+        <li><a href="collaborations.html">/collaborations</a></li>
+        <li><a href="resources.html">/resources</a></li>
+        <!-- <li><a href="https://github.com/tombetthauser/stable-diffusion/blob/main/README.md">/github</a></li> -->
+        <li><a href="about.html">/about</a></li>
+    </ul>
+    <section>
+        <ul>
+            <li>
+                <h4 id="model-5">Model-5 Notes [12.20.22]</h4>
+                <p>Chose to train model only using images from Chauvet Cave rather than including Lascaux and Alta Mira. Refactored textual inversion notebook and used incorrect model token for first run. Got several hundred output images with no prompt and no custom concept model used. Images were deleted but were dominated by images of non-existent objects that vaguely resembled machine parts or guns. Sounds cool but was not particularly compelling.</p>
+
+                <p>After correcting the notebook experimented with running the concept with no text prompt. Output was not particularly diverse and leaned towards what felt like forced figuration, ie photorealistic images of human figures coming out of the textures the model was trained to emulate.</p>
+               
+                <p>Ultimately the best output was achieved from prepending prompts with 'a cavepainting of' and appending them with 'in the style of &lt;ahx-model-5&gt;'. It did particularly well with prompts requesting abstraction, animals and planets. It struggled with prompts for symmetrical and geometric forms.</p>
+
+                <a class="small-link" href="model-5.html">/model-5</a>
+                
+                <!-- <h4>Model-5 Stats</h4>
+                <ul>
+                    <li>images produced: 400</li>
+                    <li>images selected: 75</li>
+                </ul>
+                
+                <h4>Successful Prompts</h4>
+                <ul>
+                    <li>''</li>
+                    <li>images selected: 75</li>
+                </ul> -->
+            </li>
+        </ul>
+    </section>
+</body>
+</html>
