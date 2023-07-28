@@ -94,7 +94,7 @@ for model_name in model_folder_names:
 
             collaborations_page = open(f"../collaborations.html", "w", encoding='utf-8')
             collaborations_page.write(collaborations_page_string)
-            collaborations.close()
+            collaborations_page.close()
 
             # MAKE EMPTY MODEL FOLDERS
                 # get model folder names in images folder
