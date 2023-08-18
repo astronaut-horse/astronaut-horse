@@ -99,3 +99,9 @@
       margin-top: 20px;
       margin-bottom: 50px;
     }
+
+    a.about-link {
+      font-size: 14px;
+      margin-bottom: 60px;
+      display: block;
+    }
