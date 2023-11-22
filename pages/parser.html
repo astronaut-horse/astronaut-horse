@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👩‍🚀 Astronaut Horse</title>
+</head>
+<link rel="stylesheet" href="app.css">
+<body>
+
+    <script>
+        const promptToLabel = () => {
+            const promptEle = document.querySelector("#prompt");
+            const labelEle = document.querySelector("#label");
+
+            let promptArray = promptEle.innerHTML.trim().split(",").map(e => e.trim());
+            promptArray = promptArray.map(ele => {
+                if (ele.includes("=")) {
+                    return ele.split("=").map(f => f.trim());
+                } else if (ele.includes(":")) {
+                    return ele.split(":").map(f => f.trim());
+                }
+            });
+
+            const promptObj = promptArray.reduce((acc, ele) => {
+                acc[ele[0].split(" ")[0]] = ele[1];
+                return acc;
+            }, {});
+
+            let prompt = promptObj.prompt.split(" ");
+
+            prompt = prompt.map(e => e.split("&lt;")).flat();
+            prompt = prompt.map(e => e.split("&gt;")).flat();
+            prompt = prompt.filter(e => e !== "" && e !== "'");
+            prompt = prompt.map(e => e.includes("ahx") ? e.split("-")[2] : e);
+            prompt = prompt.map(e => e.replace("'", ""));
+
+            prompt = prompt.join(" ");
+
+            console.log({prompt: promptEle.innerHTML});
+            console.log({prompt});
+        }
+        
+        const labelToPrompt = () => {
+            const promptEle = document.querySelector("#prompt");
+            const labelEle = document.querySelector("#label");
+    
+            console.log({promptEle, labelEle});
+        }
+    </script>
+
+    <h1>Prompt Info | Gallery Label</h1>
+    <div style="width: 300px; max-width: 45%; min-width: 200px; display: inline-block;">
+        <label style="display: block;">Prompt Info</label>
+        <textarea id="prompt" rows="5" style="width: 95%;">
+            prompt: 'dog <ahx-beta-4305ed7> <ahx-beta-42e55a7>', seed = 3678052658428,
+                height: 768px, width: 768px,
+                guidance: 7.5, steps: 30, negative prompt: 
+        </textarea>
+    </div>
+    <div style="width: 300px; max-width: 45%; min-width: 200px; display: inline-block;">
+        <label style="display: block;">Gallery Label</label>
+        <textarea id="label" rows="5" style="width: 95%;"></textarea>
+    </div>
+
+    <button onclick="promptToLabel()" style="display: block; margin-top: 25px; cursor: pointer;">
+        prompt info --&gt; gallery label
+    </button>
+    <button onclick="labelToPrompt()" style="display: block; margin-top: 5px; cursor: pointer;">
+        gallery label --&gt; prompt info
+    </button>
+
+</body>
+
+
+</html>
